@@ -1,11 +1,12 @@
 using Microsoft.EntityFrameworkCore;
+using PT.API;
 using PT.Config;
 
 namespace PT.DTO;
 
-public class PriceREPO(AppDbContextFactory dbContextFactory) : IPriceREPO
+public class DataRepo(AppDbContextFactory dbContextFactory) : IDataREPO
 {
-    public async Task DoRecord(CurrencyEntity model)
+    public async Task DoRecord(AnswerModel model)
     {
         await using var dbContext = dbContextFactory.CreateDbContext();
 

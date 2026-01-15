@@ -1,6 +1,8 @@
+using PT.API;
+
 namespace PT.Services;
 
 public interface ICollectionService
 {
-    Task DoRecord();
+    Task<bool> DoRecord(AnswerModel answer);
 }

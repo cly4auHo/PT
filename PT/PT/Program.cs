@@ -1,16 +1,13 @@
 using Microsoft.EntityFrameworkCore;
 using PT;
-using PT.API;
 using PT.Config;
 using PT.DTO;
 using PT.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddHostedService<HostedService>();
 builder.Services.AddSingleton<ICollectionService, CollectionService>();
-builder.Services.AddSingleton<IServer, BinanceAPI>();
-builder.Services.AddSingleton<IPriceREPO, PriceREPO>();
+builder.Services.AddSingleton<IDataREPO, DataRepo>();
 builder.Services.AddSingleton<AppDbContextFactory, AppDbContextFactory>();
 
 builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));

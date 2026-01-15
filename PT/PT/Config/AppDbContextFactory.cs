@@ -2,12 +2,12 @@ using Microsoft.EntityFrameworkCore;
 
 namespace PT.Config;
 
-public class AppDbContextFactory : IDbContextFactory<AppDbContext>
+public class AppDbContextFactory(AppSettings appSettings) : IDbContextFactory<AppDbContext>
 {
     public AppDbContext CreateDbContext()
     {
         var optionsBuilder = new DbContextOptionsBuilder<AppDbContext>();
-        optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=history_of_currency;Username=user;Password=password");
+        optionsBuilder.UseNpgsql(appSettings.DefaultConnection);
 
         return new AppDbContext(optionsBuilder.Options);
     }
