@@ -4,5 +4,5 @@ namespace PT.Services;
 
 public interface ICollectionService
 {
-    Task<bool> DoRecord(AnswerModel answer);
+    Task<bool> DoRecord(UserRequestData model);
 }

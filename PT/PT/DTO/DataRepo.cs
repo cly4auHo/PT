@@ -1,24 +1,27 @@
-using Microsoft.EntityFrameworkCore;
-using PT.API;
 using PT.Config;
+using Microsoft.EntityFrameworkCore;
 
 namespace PT.DTO;
 
-public class DataRepo(AppDbContextFactory dbContextFactory) : IDataREPO
+public class DataRepo(AppDbContextFactory dbContextFactory) : IDataRepo
 {
-    public async Task DoRecord(AnswerModel model)
+    public async Task<bool> DoRecord(AnswerEntity entity)
     {
         await using var dbContext = dbContextFactory.CreateDbContext();
 
-        dbContext.Currency.Add(model);
-        
+        dbContext.Answers.Add(entity);
+
         try
         {
-            await dbContext.SaveChangesAsync();
+            var result = await dbContext.SaveChangesAsync();
+            
+            return result == 1;
         }
-        catch (DbUpdateException ex)
+        catch (Exception e)
         {
-            Console.WriteLine(ex.InnerException?.Message ?? ex.Message);
+            Console.WriteLine(e.InnerException?.Message ?? e.Message);
+            
+            return false;
         }
     }
 }

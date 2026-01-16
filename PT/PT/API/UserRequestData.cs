@@ -1,6 +1,7 @@
 namespace PT.API;
 
-public class AnswerModel
+[Serializable]
+public class UserRequestData
 {
     public bool Solved;
     public int Time;

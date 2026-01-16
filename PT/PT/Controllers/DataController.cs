@@ -1,20 +1,20 @@
-using Microsoft.AspNetCore.Mvc;
 using PT.API;
 using PT.Services;
+using Microsoft.AspNetCore.Mvc;
 
 namespace PT.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class DataController(ICollectionService dataService) : ControllerBase
+public class DataController(ICollectionService collectionService) : ControllerBase
 {
     [HttpPost]
-    public async Task<IActionResult> SendData([FromBody] AnswerModel requestData)
+    public async Task<IActionResult> SendData([FromBody] UserRequestData requestData)
     {
         if (requestData == null)
             return BadRequest(new { message = "Data is required." });
 
-        var result = await dataService.DoRecord(requestData);
+        var result = await collectionService.DoRecord(requestData);
         
         if (result)
         {

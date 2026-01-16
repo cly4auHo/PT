@@ -1,8 +1,6 @@
-using PT.API;
-
 namespace PT.DTO;
 
-public interface IDataREPO
+public interface IDataRepo
 {
-    Task DoRecord(AnswerModel model);
+    Task<bool> DoRecord(AnswerEntity entity); 
 }

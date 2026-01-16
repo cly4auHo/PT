@@ -3,10 +3,24 @@ using PT.DTO;
 
 namespace PT.Services;
 
-public class CollectionService(IDataREPO appSettings) : ICollectionService
+public class CollectionService(IDataRepo dataRepo) : ICollectionService
 {
-    public async Task<bool> DoRecord(AnswerModel answerModel)
+    public async Task<bool> DoRecord(UserRequestData data)
     {
-        return false;
+        try
+        {
+            var model = new AnswerEntity
+            {
+                Solved = data.Solved,
+                Time = data.Time
+            };
+        
+            return await dataRepo.DoRecord(model);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.Message);
+            return false;
+        }
     }
 }
