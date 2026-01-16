@@ -1,23 +1,30 @@
-﻿version: '3.8'
+﻿version: "3.9"
 
 services:
   db:
     image: postgres:15
-    container_name: postgres_db
-    restart: unless-stopped
+    container_name: postgres-db
     environment:
       POSTGRES_USER: user
       POSTGRES_PASSWORD: password
-      POSTGRES_DB: history_of_currency
+      POSTGRES_DB: emails
     ports:
       - "5432:5432"
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-  pt:
-    image: pt
-    build:
-      context: .
-      dockerfile: PT/Dockerfile
+    networks:
+      - backend
+  
+  app:
+    build: .
+    container_name: app
+    depends_on:
+      - db
+    environment:
+      - ConnectionStrings__DefaultConnection=Host=db;Port=5432;Database=emails;Username=user;Password=password;
+    ports:
+      - "5186:80"
+    networks:
+      - backend
 
-volumes:
-  postgres_data:
+networks:
+    backend:
+      driver: bridge

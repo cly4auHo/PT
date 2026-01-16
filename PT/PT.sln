@@ -1,10 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PT", "PT\PT.csproj", "{F31E0E3A-913D-4C60-9787-6CFB816F1D99}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PT", "PT\PT.csproj", "{8524227D-B873-4F51-AC47-D23D6BB2350C}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4B101321-41F0-4725-BDE5-21F6539C3997}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5CEC6CC2-781C-4645-BCE1-6699505E8F93}"
 	ProjectSection(SolutionItems) = preProject
 		compose.yaml = compose.yaml
+		Dockerfile = Dockerfile
+		.dockerignore = .dockerignore
 	EndProjectSection
 EndProject
 Global
@@ -13,9 +15,9 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F31E0E3A-913D-4C60-9787-6CFB816F1D99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F31E0E3A-913D-4C60-9787-6CFB816F1D99}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F31E0E3A-913D-4C60-9787-6CFB816F1D99}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F31E0E3A-913D-4C60-9787-6CFB816F1D99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8524227D-B873-4F51-AC47-D23D6BB2350C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8524227D-B873-4F51-AC47-D23D6BB2350C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8524227D-B873-4F51-AC47-D23D6BB2350C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8524227D-B873-4F51-AC47-D23D6BB2350C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
