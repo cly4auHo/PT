@@ -8,9 +8,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4323f9d5-4416-4f59-9b53-b1162ee226d8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/PT/API/UserRequestData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PT/API/UserRequestData.cs" afterDir="false" />
-    </list>
+    <list default="true" id="4323f9d5-4416-4f59-9b53-b1162ee226d8" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -86,7 +84,7 @@
       <updated>1768531853189</updated>
       <workItem from="1768531854347" duration="209000" />
       <workItem from="1768532072168" duration="15000" />
-      <workItem from="1768532130726" duration="2375000" />
+      <workItem from="1768532130726" duration="2534000" />
     </task>
     <servers />
   </component>
@@ -96,37 +94,5 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/PT/Controllers/DataController.cs</url>
-          <line>13</line>
-          <properties documentPath="D:\Projects\PT\PT\PT\Controllers\DataController.cs" containingFunctionPresentation="Method 'SendData'">
-            <startOffsets>
-              <option value="337" />
-            </startOffsets>
-            <endOffsets>
-              <option value="361" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/PT/Controllers/DataController.cs</url>
-          <line>27</line>
-          <properties documentPath="D:\Projects\PT\PT\PT\Controllers\DataController.cs" containingFunctionPresentation="Method 'SendData'">
-            <startOffsets>
-              <option value="693" />
-            </startOffsets>
-            <endOffsets>
-              <option value="749" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
