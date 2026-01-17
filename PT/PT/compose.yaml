@@ -3,11 +3,11 @@
 services:
   db:
     image: postgres:15
-    container_name: postgres-db
+    container_name: postgres-db-answers
     environment:
       POSTGRES_USER: user
       POSTGRES_PASSWORD: password
-      POSTGRES_DB: emails
+      POSTGRES_DB: answers
     ports:
       - "5432:5432"
     networks:
@@ -19,7 +19,7 @@ services:
     depends_on:
       - db
     environment:
-      - ConnectionStrings__DefaultConnection=Host=db;Port=5432;Database=emails;Username=user;Password=password;
+      - ConnectionStrings__DefaultConnection=Host=db;Port=5432;Database=answers;Username=user;Password=password;
     ports:
       - "5186:80"
     networks:

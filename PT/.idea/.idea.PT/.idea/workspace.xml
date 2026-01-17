@@ -8,7 +8,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4323f9d5-4416-4f59-9b53-b1162ee226d8" name="Changes" comment="" />
+    <list default="true" id="4323f9d5-4416-4f59-9b53-b1162ee226d8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/PT/API/UserResponse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PT/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PT/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/PT/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PT.sln" beforeDir="false" afterPath="$PROJECT_DIR$/PT.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PT/Config/AppDbContextFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PT/Config/AppDbContextFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PT/Controllers/DataController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PT/Controllers/DataController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PT/DTO/DataRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PT/DTO/DataRepo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PT/PT.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PT/PT.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PT/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PT/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PT/Services/CollectionService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PT/Services/CollectionService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PT/Services/ICollectionService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PT/Services/ICollectionService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PT/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/PT/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/PT/compose.yaml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +34,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/fe1e66e174729fcc9f77713dd32602a59258866b1352c592572783d3dd3d029/IDbContextFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PT/AppSettings.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -28,20 +50,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.PT: http.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.PT: http.executor&quot;: &quot;Debug&quot;,
+    &quot;Docker.PT/compose.yaml.db: Compose Deployment.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;sqlserver.localdb&quot;,
+      &quot;sqlserver&quot;,
+      &quot;postgresql&quot;
+    ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.PT: http">
     <configuration name="PT: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/PT/PT.csproj" />
@@ -73,6 +103,60 @@
         <option name="Build" />
       </method>
     </configuration>
+    <configuration name="PT/Dockerfile" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="imageTag" value="pt" />
+          <option name="containerName" value="pt" />
+          <option name="contextFolderPath" value="D:\Projects\PT\PT" />
+          <option name="portBindings">
+            <list>
+              <DockerPortBindingImpl>
+                <option name="containerPort" value="8080" />
+                <option name="hostIp" value="127.0.0.1" />
+                <option name="hostPort" value="8080" />
+              </DockerPortBindingImpl>
+            </list>
+          </option>
+          <option name="sourceFilePath" value="PT/Dockerfile" />
+        </settings>
+      </deployment>
+      <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="PT/compose.yaml.db: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="db" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="PT/compose.yaml" />
+        </settings>
+      </deployment>
+      <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
+      <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="false" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.PT/compose.yaml.db: Compose Deployment" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -85,6 +169,10 @@
       <workItem from="1768531854347" duration="209000" />
       <workItem from="1768532072168" duration="15000" />
       <workItem from="1768532130726" duration="2534000" />
+      <workItem from="1768543682199" duration="1545000" />
+      <workItem from="1768646964099" duration="1408000" />
+      <workItem from="1768648663383" duration="5783000" />
+      <workItem from="1768668327835" duration="2860000" />
     </task>
     <servers />
   </component>

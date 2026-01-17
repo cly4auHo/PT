@@ -24,4 +24,11 @@ public class DataRepo(AppDbContextFactory dbContextFactory) : IDataRepo
             return false;
         }
     }
+    
+    public async Task<List<AnswerEntity>> GetAllAsync()
+    {
+        await using var dbContext = dbContextFactory.CreateDbContext();
+        
+        return await dbContext.Answers.AsNoTracking().ToListAsync();
+    }
 }

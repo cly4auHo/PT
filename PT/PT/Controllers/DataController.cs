@@ -27,4 +27,12 @@ public class DataController(ICollectionService collectionService) : ControllerBa
 
         return BadRequest(new { message = "Data is invalid." });
     }
+    
+    [HttpGet]
+    public async Task<IActionResult> SendData()
+    {
+        var data = await collectionService.GetAllAsync();
+
+        return Ok(new { data });
+    }
 }

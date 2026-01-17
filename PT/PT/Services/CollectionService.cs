@@ -23,4 +23,6 @@ public class CollectionService(IDataRepo dataRepo) : ICollectionService
             return false;
         }
     }
+    
+    public async Task<List<AnswerEntity>> GetAllAsync() => await dataRepo.GetAllAsync();
 }
