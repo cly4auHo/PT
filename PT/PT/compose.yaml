@@ -21,7 +21,7 @@ services:
     environment:
       - ConnectionStrings__DefaultConnection=Host=db;Port=5432;Database=answers;Username=user;Password=password;
     ports:
-      - "5186:80"
+      - "5000:5000"
     networks:
       - backend
 

@@ -6,6 +6,8 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.WebHost.UseUrls("http://0.0.0.0:5000");
+
 builder.Services.AddSingleton<ICollectionService, CollectionService>();
 builder.Services.AddSingleton<AppDbContextFactory, AppDbContextFactory>();
 builder.Services.AddSingleton<IDataRepo, DataRepo>();
@@ -38,5 +40,7 @@ app.UseSwaggerUI();
 app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
+
+app.MapGet("/", () => "App running on http://localhost:5000/");
 
 app.Run();
