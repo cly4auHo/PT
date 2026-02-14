@@ -1,0 +1,30 @@
+﻿version: "3.9"
+
+services:
+  db:
+    image: postgres:15
+    container_name: postgres-db-answers
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: answers
+    ports:
+      - "5432:5432"
+    networks:
+      - backend
+  
+  app:
+    build: .
+    container_name: app
+    depends_on:
+      - db
+    environment:
+      - ConnectionStrings__DefaultConnection=Host=db;Port=5432;Database=answers;Username=user;Password=password;
+    ports:
+      - "5000:5000"
+    networks:
+      - backend
+
+networks:
+    backend:
+      driver: bridge
