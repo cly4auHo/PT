@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using PT.API;
 using PT.Services;
 
 namespace PT.Controllers;
@@ -8,15 +9,15 @@ namespace PT.Controllers;
 public class FeedbackController(IFeedBackService feedBackService) : ControllerBase
 {
     [HttpPost]
-    public async Task<IActionResult> SendFeedback([FromBody] string feedback)
+    public async Task<IActionResult> SendFeedback([FromBody] FeedbackRequestData data)
     {
-        if (feedback == null)
+        if (data == null)
             return BadRequest(new { message = "Data is required." });
-
-        var result = feedBackService.WriteFeedback(feedback);
+        
+        var result = feedBackService.WriteFeedback(data.Feedback);
         
         return result 
-            ? Ok(new { message = "Feedback received" }) 
+            ? Ok(new { exist = result }) 
             : BadRequest(new { message = "Feedback is invalid." });
     }
 

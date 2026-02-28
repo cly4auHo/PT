@@ -12,7 +12,7 @@ public class FeedBackService : IFeedBackService
         try
         {
             if (AlreadyExist)
-                return false;
+                return true;
             
             using var writer = new StreamWriter(FilePath);
             writer.WriteLine(feedback);
