@@ -11,7 +11,7 @@ using PT.Config;
 namespace Expouse.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260117150529_InitialCreate")]
+    [Migration("20260228051614_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
