@@ -9,6 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.WebHost.UseUrls("http://0.0.0.0:5000");
 
 builder.Services.AddSingleton<ICollectionService, CollectionService>();
+builder.Services.AddSingleton<IFeedBackService, FeedBackService>();
 builder.Services.AddSingleton<AppDbContextFactory, AppDbContextFactory>();
 builder.Services.AddSingleton<IDataRepo, DataRepo>();
 
